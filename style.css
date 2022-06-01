@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar ul{
+    list-style-type: none;
+    height:3em;
+    background-color: rgb(36, 6, 63);
+    color: rgb(213, 223, 232);
+    display: flex;
+    align-items: center;
+    padding: 0.1em;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color:#abe2fb;
+}
+
+.gamecontainer{
+/* background-color: #abe2fb; */
+display: flex;
+justify-content: center;
+margin-top: 2em;    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: #58a4eb;
+}
+
+.gameinfo{
+    padding: 1em;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+.gameinfo h1{
+    font-size: 2em;
+}
+
+.imgbox img{
+    border-radius: 25%;
+    width:0;
+    transition: width 1s linear;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    border: 2px solid black;
+    border-radius: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    font-weight: 700;
+    color: #0c48b7;
+    font-family: sans-serif;
+    cursor: pointer;
+    background-color: rgba(0, 255, 255, 0.225);
+    margin: 1em;
+}
+
+.line{
+    background-color: black;
+    width:0;
+    transition: width 500ms linear;
+    background-color: #0c48b7;
+    height: 3px;
+    position: absolute;
+}
+
+.info{
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:700px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+
+    .gameinfo{
+        margin: 5em;
+    }
+
+    .container{
+        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(3, 15vw);
+    }
+
+    .box{
+        font-size: 2em;
+    }
+    .navbar ul{
+        width: 100%;
+    }
+
+    .container{
+        grid-template-columns: repeat(3,10vw);
+        grid-template-rows: repeat(3, 10vw);
+    }
+
+    .gameinfo h1{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width:700px) and (max-width:1000px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 2em;
+    }
+
+    .container{
+        grid-template-columns: repeat(3,10vw);
+        grid-template-rows: repeat(3, 10vw);
+    }
+
+    .box{
+        font-size: 5em;
+    }
+}
